@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body {
+    /* background-color: black;
+    color: white; */
+}
+
+.left{
+    width: 25vw;
+    padding: 10px;
+}
+.right {
+    width: 75vw;
+}
+
+.home ul li {
+  width: 15px;
+  list-style: none;
+  display: flex;
+  gap: 23px;
+  padding: 7px;
+  font-weight: bold;
+
+
+
+}
+
+.logo{
+    fill: black;
+      display: flex;
+      align-items: center;
+ 
+}
+
+.p-1{
+    padding: 10px;
+}
+
+.library{
+min-height:50vh ;
+}
+
+.heading{
+width: 19px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding: 10px;
+ font-size: 11px;
+  
+
+}
+.heading h2{
+     flex-shrink: 0;
+}
+
+.footer{
+    display: flex;
+
+    font-size: 10px;
+    color: rgb(122, 117, 117);
+     gap: 13px;
+}
+
+.footer a {
+    color: gray ;
+      
+}
+
+/* 38:03
+ending time : monday  */
