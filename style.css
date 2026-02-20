@@ -39,7 +39,8 @@ body {
 }
 
 .library{
-min-height:50vh ;
+min-height:70vh ;
+position: relative;
 }
 
 .heading{
@@ -59,10 +60,11 @@ width: 19px;
 
 .footer{
     display: flex;
-
     font-size: 10px;
     color: rgb(122, 117, 117);
      gap: 13px;
+     position: absolute;
+     bottom: 9px;
 }
 
 .footer a {
@@ -70,5 +72,16 @@ width: 19px;
       
 }
 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(34 34 34);
+}
+
+
+
 /* 38:03
 ending time : monday  */
+
