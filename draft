@@ -1,0 +1,725 @@
+html : 
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <title>'Spotify - Web Player: Music for everyone'</title>
+  </head>
+  <body>
+    <!-- left side 1st box or upper side  -->
+    <div class="container flex bg-black">
+      <div class="left">
+        <div class="home bg-grey rounded m-1 p-1">
+          <div class="logo"><img src="logo.svg" alt="logo" /></div>
+          <ul>
+            <li><img src="home.svg" alt="home" />home</li>
+            <li><img src="search.svg" alt="search" />search</li>
+          </ul>
+        </div>
+
+        <div class="library bg-grey m-1 p-1 rounded">
+          <div class="heading">
+            <img src="playlist.svg" alt="playlistSvg" />
+            <h2>Your Library</h2>
+          </div>
+
+          <div class="songList">
+            <ul>
+              <!-- <li>song name</li> -->
+            </ul>
+          </div>
+
+          <!-- left side fotter 2nd box or bottom part -->
+          <div class="footer">
+            <div>
+              <a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a>
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/privacy/"
+                ><span>Privacy Center</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/legal/privacy-policy/"
+                ><span>Privacy Policy</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/legal/cookies-policy/"
+                ><span>Cookies</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"
+                ><span>About Ads</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/jp/accessibility/"
+                ><span>Accessibility</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- right side 1st box -->
+      <div class="right bg-grey rounded">
+        <div class="header rounded">
+          <div class="nav">
+            <svg
+              width="24"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+
+          <div class="buttons">
+            <button class="signupbtn">Sign up</button>
+            <button class="loginbtn">Log in</button>
+          </div>
+        </div>
+
+        <!-- right side second box -->
+
+        <div class="spotify-playlists">
+          <h2>Spotify Playlists</h2>
+          <div class="card-container">
+            <!-- card1 -->
+
+            <div class="card">
+              <div class="playbutton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="60"
+                  height="60"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#1db954" />
+                  <g transform="scale(0.74) translate(4  4)">
+                    <path
+                      d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                      fill="black"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025c17c9e62fe51ac4b7124f4e"
+                alt="card-image-1"
+              />
+              <h3>Rahmatun <br />Lil’Alameen</h3>
+              <p style="font-size: 15px; color: grey">Maher Zain</p>
+            </div>
+
+            <div class="card">
+              <div class="playbutton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="60"
+                  height="60"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#1db954" />
+                  <g transform="scale(0.74) translate(4  4)">
+                    <path
+                      d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+                      fill="black"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025c17c9e62fe51ac4b7124f4e"
+                alt="card-image-1"
+              />
+              <h3>Rahmatun <br />Lil’Alameen</h3>
+              <p style="font-size: 15px; color: grey">Maher Zain</p>
+            </div>
+          </div>
+
+          <!-- right side third box and [laybar where we click on the button to play it -->
+          <div class="playbar">
+            <div class="seekbar">
+              <div class="circle"></div>
+            </div>
+
+            <div class="songinfo"></div>
+       
+         
+            <div class="songbuttons">
+                    
+              <div class="songtime"></div>
+              <img id="previous" src="previoussong.svg" alt="" />
+              <button id="playBtn">
+                <img src="play.svg" class="playsvg" alt="" />
+              </button>
+              <img id="next" src="nextsong.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+>
+
+
+
+
+
+
+
+
+
+
+
+
+
+css ; 
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+body {
+  background-color: black;
+  color: white;
+}
+
+.left {
+  width: 25vw;
+  padding: 10px;
+}
+
+.home ul li {
+  width: 15px;
+  list-style: none;
+  display: flex;
+  gap: 23px;
+  padding-top: 14px;
+  font-weight: bold;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.library {
+  min-height: 72.5vh;
+  position: relative;
+}
+
+.heading {
+  width: 19px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  font-size: 11px;
+}
+.heading h2 {
+  flex-shrink: 0;
+}
+
+.footer {
+  display: flex;
+  font-size: 10px;
+  gap: 13px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+}
+
+.footer a {
+  color: gray;
+}
+
+.right {
+  margin: 6px 0;
+  position: relative;
+  margin: 17px 0px 0px 0px;
+  width: 72vw;
+  position: relative;
+}
+
+/* buttons */
+.signupbtn {
+  background-color: rgb(33, 33, 33);
+  color: rgb(153, 146, 146);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bolder;
+  text-shadow: 0.5px 0px 0px grey;
+}
+.signupbtn:hover {
+  color: #fdfdfd;
+  transform: scale(1.07);
+}
+
+.loginbtn {
+  /* background-color: rgb(163, 60, 60);   
+    color: rgb(153, 146, 146);         
+  border: none;             
+  padding: 10px 20px;     
+  cursor: pointer;       
+  font-weight: bolder;
+  text-shadow: 0.5px 0px 0px grey; */
+
+  padding: 6px;
+  width: 82px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-shadow: 0.9px 0px 0px rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.loginbtn:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+  color: black;
+  text-shadow: 0.9px 0px 0px black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(34 34 34);
+}
+
+.header > * {
+  padding: 20px;
+}
+
+/* cards  */
+
+.spotify-playlists {
+  padding: 20px;
+  overflow-x: scroll;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 5px;
+  max-height: 69vh;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 1px;
+}
+::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+.card {
+  width: 180px;
+  padding: 10px;
+  /* background-color: #252525; */
+  border-radius: 15px;
+  position: relative;
+}
+
+/* card hover changed
+playbutton er 
+transform: translateY(10px);
+transition: all 0.2s ease; te change hoyeche
+.card:hover .playbutton {
+opacity: 1;
+transform: translateY(0);
+
+} te change */
+
+.playbutton {
+  position: absolute;
+  top: 124px;
+  left: 131px;
+  opacity: 0%;
+}
+
+.playsvg{
+  cursor: pointer;
+}
+
+
+
+.card > * {
+  padding-top: 2px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+  box-shadow: -6px 3px 9px -2px #310707;
+  border-radius: 5px;
+}
+.playbar {
+  position: absolute;
+  bottom: 0px;
+  left: 1px;
+  bottom: 3px;
+  background-color: rgb(255, 255, 255);
+  width: 99.7%;
+  height: 41px;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 6px 6px;
+  cursor: pointer;
+
+  
+}
+
+
+.songList {
+  height: 338px;
+  overflow: auto;
+  /* width: px; */
+  margin-bottom: 44px;
+}
+
+.songbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.songList ul {
+  padding: 0px 6px;
+}
+
+.songList ul li {
+  list-style-type: decimal;
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  cursor: pointer;
+  padding: 6px 7px;
+  margin: 6px 1px;
+  border: 1px solid rgb(39, 37, 37);
+  border-radius: 5px;
+}
+
+.seekbar {
+  height: 4px;
+  width: 98%;
+  background-color:#c1d0e4;
+  border: none;
+  position: absolute;
+  left: 7px;
+  bottom: 5px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.seekbar:hover {
+  background-color: #535353;
+   
+}
+
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  transform: translate(-50%, -50%);
+  transition: left 0.5s;
+}
+
+
+
+
+
+
+
+#playBtn {
+  background: transparent;
+  border: none;       /* Removes the default button border */
+  outline: none;      /* Removes the blue/white outline when clicked */
+  padding: 0;
+  cursor: pointer;
+}
+
+
+#playBtn img,
+.playsvg {
+ width:90px ;/* Increase or decrease this value as needed */
+  height=25px; /* Keep height equal to width to prevent stretching */
+}
+
+
+
+.songtime{
+  
+}
+
+
+
+
+
+
+/* 1. Target ONLY the Music SVG (The first image in the list item) */
+.songList ul li > img:first-of-type {
+  width: 20px;
+  /* height: 21px; */
+  /* min-width: 20px;  */
+  /* Prevents shrinking */
+}
+
+/* 2. Target ONLY the Play Now SVG (The image inside the playnow div) */
+.songList ul li .playnow img {
+  width: px; /* You can make this bigger or smaller independently */
+  /* height: 30px; */
+  /* margin-left: 10px; */
+}
+
+/* 3. Ensure the list item doesn't squash the icons */
+.songList ul li {
+  display: flex;
+  align-items: center; /* Keeps everything vertically centered */
+}
+
+.songList .info {
+  font-size: 13px;
+  width: 160px;
+}
+
+.info h3 {
+  font-weight: bold;
+  color: white;
+}
+
+
+
+
+
+
+js : 
+
+console.log('Project Spotify: JavaScript Loaded');
+
+// Global variables
+let currentSong = new Audio();
+let songs = [];       // Holds our list of songs
+let currentIndex = 0; // Tracks which song number is playing
+
+function secondsToMinutesSeconds(seconds) {
+    if (isNaN(seconds) || seconds < 0) return "00:00";
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+}
+
+async function getsongs() {
+    // Detect the current host port dynamically or default to 3000
+    let origin = window.location.origin.includes("http") 
+        ? window.location.origin 
+        : "http://127.0.0.1:3000";
+        
+    let songsUrl = `${origin}/songs/`;
+
+    try {
+        let response = await fetch(songsUrl);
+        if (!response.ok) throw new Error("Could not reach songs directory");
+
+        let text = await response.text();
+        let div = document.createElement("div");
+        div.innerHTML = text;
+        let an = div.getElementsByTagName("a");
+
+        let loadedSongs = [];
+        for (let i = 0; i < an.length; i++) {
+            let href = an[i].getAttribute("href");
+            if (href && href.endsWith(".mp3")) {
+                let cleanName = decodeURIComponent(href)
+                    .split('/')
+                    .pop()
+                    .replace(".mp3", "");
+
+                loadedSongs.push({
+                    url: href.startsWith("http") ? href : encodeURI(`${songsUrl}${href}`),
+                    name: cleanName
+                });
+            }
+        }
+        
+        if (loadedSongs.length > 0) return loadedSongs;
+    } catch (err) {
+        console.warn("Fetch failed, using static fallback songs list:", err);
+    }
+
+    // FALLBACK: Hardcoded song list matching your HTML folder structure
+    return [
+        { name: "After Sunset - Alex Jones _ Xander Jones", url: "songs/After Sunset - Alex Jones _ Xander Jones.mp3" },
+        { name: "Fire In The Sky - Alex Jones _ Xander Jones", url: "songs/Fire In The Sky - Alex Jones _ Xander Jones.mp3" },
+        { name: "Intergalactic - Alex Jones _ Xander Jones", url: "songs/Intergalactic - Alex Jones _ Xander Jones.mp3" },
+        { name: "On The Flip - The Grey Room _ Density & Time", url: "songs/On The Flip - The Grey Room _ Density & Time.mp3" },
+        { name: "Stake Out - Alex Jones _ Xander Jones", url: "songs/Stake Out - Alex Jones _ Xander Jones.mp3" }
+    ];
+}
+
+const playMusic = (track, pause = false) => {
+    currentSong.src = track;
+    if (!pause) {
+        currentSong.play().catch(err => console.log("Playback error:", err));
+        const playImg = document.querySelector("#playBtn img");
+        if (playImg) playImg.src = "pause.svg";
+    }
+}
+
+
+
+
+
+
+async function main() {
+    // Load songs
+    songs = await getsongs();
+    
+    let songUL = document.querySelector(".songList ul");
+    if (songUL) {
+        songUL.innerHTML = "";
+
+        // Populate Library List
+        songs.forEach((song) => {
+            songUL.innerHTML += `<li>
+                <img class="invert" src="music.svg" alt="music">
+                <div class="info">
+                    <h3>${song.name}</h3>
+                </div>
+                <div class="playnow">
+                    <span>Play Now</span>
+                    <img class="invert" src="play.svg" alt="play">
+                </div>
+            </li>`;
+        });
+
+        // Add Click Handlers for Playlist Items
+        Array.from(songUL.getElementsByTagName("li")).forEach((li, index) => {
+            li.addEventListener("click", () => {
+                currentIndex = index;
+                console.log("Playing:", songs[currentIndex].name);
+                playMusic(songs[currentIndex].url);
+            });
+        });
+    }
+
+
+// Update time continuously as audio plays
+    // currentSong.addEventListener("timeupdate", () => {
+    //     const songTime = document.querySelector(".songtime");
+    //     if (songTime) {
+    //         const current = secondsToMinutesSeconds(currentSong.currentTime);
+    //         const duration = secondsToMinutesSeconds(currentSong.duration);
+    //         songTime.innerHTML = `${current} / ${duration}`;
+    //     }
+    // });
+
+
+
+
+
+
+
+
+
+    // Play/Pause Control Button
+    const playBtn = document.getElementById("playBtn");
+    if (playBtn) {
+        playBtn.addEventListener("click", () => {
+            if (currentSong.paused) {
+                if (!currentSong.src && songs.length > 0) {
+                    playMusic(songs[0].url);
+                }
+                
+                else {
+                    currentSong.play();
+                }
+                const img = playBtn.querySelector("img");
+                if (img) img.src = "pause.svg";
+            } else {
+                currentSong.pause();
+                const img = playBtn.querySelector("img");
+                if (img) img.src = "play.svg";
+            }
+        });
+    }
+
+    // Next Control Button
+    const nextBtn = document.getElementById("next");
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            if ((currentIndex + 1) < songs.length) {
+                currentIndex++;
+                playMusic(songs[currentIndex].url);
+            }
+        });
+    }
+
+    // Previous Control Button
+    const prevBtn = document.getElementById("previous");
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                playMusic(songs[currentIndex].url);
+            }
+        });
+    }
+}
+
+main();

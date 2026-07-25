@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 .border {
     border : 1px solid rgb(223, 154, 154);
     margin: 3px;
@@ -21,16 +24,17 @@
 }
 
 .bg-grey {
-    background-color: #1f1e1e;
+   background-color: #121212;
 }
 .rounded{
-    border-radius:  7px;
+    border-radius:  5px;
 }
 
-.m-1{
+.m-1{ 
     margin:5px;
-    padding: 9px;
+
 }
+
 .p-1{
     padding: 10px;
 }

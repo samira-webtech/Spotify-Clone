@@ -1,18 +1,18 @@
-*{
-    margin:0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
 }
 body {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
-.left{
-    width: 25vw;
-    padding: 10px;
-}
-.right {
-    width: 75vw;
+.left {
+  width: 25vw;
+  padding: 10px;
 }
 
 .home ul li {
@@ -20,68 +20,320 @@ body {
   list-style: none;
   display: flex;
   gap: 23px;
-  padding: 7px;
+  padding-top: 14px;
   font-weight: bold;
-
-
-
 }
 
-.logo{
-    fill: black;
-      display: flex;
-      align-items: center;
- 
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-.p-1{
-    padding: 10px;
+.p-1 {
+  padding: 10px;
 }
 
-.library{
-min-height:70vh ;
-position: relative;
+.library {
+  min-height: 72.5vh;
+  position: relative;
 }
 
-.heading{
-width: 19px;
+.heading {
+  width: 19px;
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 23px;
+  gap: 20px;
   padding: 10px;
- font-size: 11px;
-  
-
+  font-size: 11px;
 }
-.heading h2{
-     flex-shrink: 0;
+.heading h2 {
+  flex-shrink: 0;
 }
 
-.footer{
-    display: flex;
-    font-size: 10px;
-    color: rgb(122, 117, 117);
-     gap: 13px;
-     position: absolute;
-     bottom: 9px;
+.footer {
+  display: flex;
+  font-size: 10px;
+  gap: 13px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
 }
 
 .footer a {
-    color: gray ;
-      
+  color: gray;
 }
 
+.right {
+  margin: 6px 0;
+  position: relative;
+  margin: 17px 0px 0px 0px;
+  width: 72vw;
+  position: relative;
+}
+
+/* buttons */
+.signupbtn {
+  background-color: rgb(33, 33, 33);
+  color: rgb(153, 146, 146);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bolder;
+  text-shadow: 0.5px 0px 0px grey;
+}
+.signupbtn:hover {
+  color: #fdfdfd;
+  transform: scale(1.07);
+}
+
+.loginbtn {
+  /* background-color: rgb(163, 60, 60);   
+    color: rgb(153, 146, 146);         
+  border: none;             
+  padding: 10px 20px;     
+  cursor: pointer;       
+  font-weight: bolder;
+  text-shadow: 0.5px 0px 0px grey; */
+
+  padding: 6px;
+  width: 82px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-shadow: 0.9px 0px 0px rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.loginbtn:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+  color: black;
+  text-shadow: 0.9px 0px 0px black;
+}
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: rgb(34 34 34);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(34 34 34);
+}
+
+.header > * {
+  padding: 20px;
+}
+
+/* cards  */
+
+.spotify-playlists {
+  padding: 20px;
+  overflow-x: scroll;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 5px;
+  max-height: 69vh;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 1px;
+}
+::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+.card {
+  width: 180px;
+  padding: 10px;
+  /* background-color: #252525; */
+  border-radius: 15px;
+  position: relative;
+}
+
+/* card hover changed
+playbutton er 
+transform: translateY(10px);
+transition: all 0.2s ease; te change hoyeche
+.card:hover .playbutton {
+opacity: 1;
+transform: translateY(0);
+
+} te change */
+
+.playbutton {
+  position: absolute;
+  top: 124px;
+  left: 131px;
+  opacity: 0%;
+}
+
+.playsvg{
+  cursor: pointer;
 }
 
 
 
-/* 38:03
-ending time : monday  */
+.card > * {
+  padding-top: 2px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+  box-shadow: -6px 3px 9px -2px #310707;
+  border-radius: 5px;
+}
+.playbar {
+  position: absolute;
+  bottom: 0px;
+  left: 1px;
+  bottom: 3px;
+  background-color: rgb(255, 255, 255);
+  width: 99.7%;
+  height: 41px;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 6px 6px;
+  cursor: pointer;
+
+  
+}
+
+
+.songList {
+  height: 338px;
+  overflow: auto;
+  /* width: px; */
+  margin-bottom: 44px;
+}
+
+.songbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.songList ul {
+  padding: 0px 6px;
+}
+
+.songList ul li {
+  list-style-type: decimal;
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  cursor: pointer;
+  padding: 6px 7px;
+  margin: 6px 1px;
+  border: 1px solid rgb(39, 37, 37);
+  border-radius: 5px;
+}
+
+.seekbar {
+  height: 4px;
+  width: 98%;
+  background-color:#c1d0e4;
+  border: none;
+  position: absolute;
+  left: 7px;
+  bottom: 5px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.seekbar:hover {
+  background-color: #535353;
+   
+}
+
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  transform: translate(-50%, -50%);
+  transition: left 0.5s;
+}
+
+
+
+
+
+
+
+#playBtn {
+  background: transparent;
+  border: none;       /* Removes the default button border */
+  outline: none;      /* Removes the blue/white outline when clicked */
+  padding: 0;
+  cursor: pointer;
+}
+
+
+#playBtn img,
+.playsvg {
+ width:90px ;/* Increase or decrease this value as needed */
+  height:25px; /* Keep height equal to width to prevent stretching */
+}
+
+
+
+.songtime {
+  position: relative; /* Enables top/bottom/left/right */
+  left:276px;
+  top: 3px;
+ /* right: 200px; */
+  color: black;
+  /* border: 1px solid #222; */
+}
+
+
+
+
+
+
+/* 1. Target ONLY the Music SVG (The first image in the list item) */
+.songList ul li > img:first-of-type {
+  width: 20px;
+  /* height: 21px; */
+  /* min-width: 20px;  */
+  /* Prevents shrinking */
+}
+
+/* 2. Target ONLY the Play Now SVG (The image inside the playnow div) */
+.songList ul li .playnow img {
+  width: px; /* You can make this bigger or smaller independently */
+  /* height: 30px; */
+  /* margin-left: 10px; */
+}
+
+/* 3. Ensure the list item doesn't squash the icons */
+.songList ul li {
+  display: flex;
+  align-items: center; /* Keeps everything vertically centered */
+}
+
+.songList .info {
+  font-size: 13px;
+  width: 160px;
+}
+
+.info h3 {
+  font-weight: bold;
+  color: white;
+}
 
