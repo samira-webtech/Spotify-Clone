@@ -2,8 +2,8 @@ console.log('Project Spotify: JavaScript Loaded');
 
 // Global variables
 let currentSong = new Audio();
-let songs = [];       // Holds our list of songs
-let currentIndex = 0; // Tracks which song number is playing
+let songs = [];       
+let currentIndex = 0; 
 
 function secondsToMinutesSeconds(seconds) {
     if (isNaN(seconds) || seconds < 0) return "00:00";
@@ -13,7 +13,6 @@ function secondsToMinutesSeconds(seconds) {
 }
 
 async function getsongs() {
-    // Detect the current host port dynamically or default to 3000
     let origin = window.location.origin.includes("http") 
         ? window.location.origin 
         : "http://127.0.0.1:3000";
@@ -50,7 +49,6 @@ async function getsongs() {
         console.warn("Fetch failed, using static fallback songs list:", err);
     }
 
-    // FALLBACK: Hardcoded song list matching your HTML folder structure
     return [
         { name: "After Sunset - Alex Jones _ Xander Jones", url: "songs/After Sunset - Alex Jones _ Xander Jones.mp3" },
         { name: "Fire In The Sky - Alex Jones _ Xander Jones", url: "songs/Fire In The Sky - Alex Jones _ Xander Jones.mp3" },
@@ -62,27 +60,30 @@ async function getsongs() {
 
 const playMusic = (track, pause = false) => {
     currentSong.src = track;
+
+    let currentTrackObj = songs.find(song => song.url === track);
+    const songNameElement = document.querySelector(".songName");
+    if (songNameElement && currentTrackObj) {
+        songNameElement.innerHTML = currentTrackObj.name;
+    }
+
+    const playImg = document.getElementById("playImg");
+
     if (!pause) {
         currentSong.play().catch(err => console.log("Playback error:", err));
-        const playImg = document.querySelector("#playBtn img");
         if (playImg) playImg.src = "pause.svg";
+    } else {
+        if (playImg) playImg.src = "play.svg";
     }
 }
 
-
-
-
-
-
 async function main() {
-    // Load songs
     songs = await getsongs();
     
     let songUL = document.querySelector(".songList ul");
     if (songUL) {
         songUL.innerHTML = "";
 
-        // Populate Library List
         songs.forEach((song) => {
             songUL.innerHTML += `<li>
                 <img class="invert" src="music.svg" alt="music">
@@ -96,53 +97,83 @@ async function main() {
             </li>`;
         });
 
-        // Add Click Handlers for Playlist Items
         Array.from(songUL.getElementsByTagName("li")).forEach((li, index) => {
             li.addEventListener("click", () => {
                 currentIndex = index;
-                console.log("Playing:", songs[currentIndex].name);
                 playMusic(songs[currentIndex].url);
             });
         });
     }
 
+    // Update time and seekbar continuously as audio plays
+    currentSong.addEventListener("timeupdate", () => {
+        const songTime = document.querySelector(".songTime");
+        if (songTime) {
+            const current = secondsToMinutesSeconds(currentSong.currentTime);
+            const duration = secondsToMinutesSeconds(currentSong.duration);
+            songTime.innerHTML = `${current} / ${duration}`;
+        }
 
-// Update time continuously as audio plays
-    // currentSong.addEventListener("timeupdate", () => {
-    //     const songTime = document.querySelector(".songtime");
-    //     if (songTime) {
-    //         const current = secondsToMinutesSeconds(currentSong.currentTime);
-    //         const duration = secondsToMinutesSeconds(currentSong.duration);
-    //         songTime.innerHTML = `${current} / ${duration}`;
-    //     }
-    // });
+        const circle = document.querySelector(".seekbar .circle");
+        const seekbar = document.querySelector(".seekbar");
+        
+        if (circle && currentSong.duration) {
+            let progressPercent = (currentSong.currentTime / currentSong.duration) * 100;
+            circle.style.left = `${progressPercent}%`;
+            seekbar.style.background = `linear-gradient(to right, #000000 ${progressPercent}%, #c1d0e4 ${progressPercent}%)`;
+        }
+    });
 
+    // Fully interactive seekbar (Click or Drag anywhere to update position)
+    const seekbar = document.querySelector(".seekbar");
+    if (seekbar) {
+        let isDragging = false;
 
+        const updateSeek = (e) => {
+            let rect = seekbar.getBoundingClientRect();
+            let clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            let clickPosition = (clientX - rect.left) / rect.width;
+            clickPosition = Math.max(0, Math.min(1, clickPosition));
+            
+            if (!isNaN(currentSong.duration)) {
+                currentSong.currentTime = clickPosition * currentSong.duration;
+            }
+        };
 
+        seekbar.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            updateSeek(e);
+        });
 
+        window.addEventListener("mousemove", (e) => {
+            if (isDragging) {
+                updateSeek(e);
+            }
+        });
 
+        window.addEventListener("mouseup", () => {
+            isDragging = false;
+        });
+    }
 
-
-
-
-    // Play/Pause Control Button
+    // Play/Pause Button Toggle Logic
     const playBtn = document.getElementById("playBtn");
     if (playBtn) {
         playBtn.addEventListener("click", () => {
+            const playImg = document.getElementById("playImg");
+            
+            if (!currentSong.src && songs.length > 0) {
+                playMusic(songs[0].url);
+                return;
+            }
+
             if (currentSong.paused) {
-                if (!currentSong.src && songs.length > 0) {
-                    playMusic(songs[0].url);
-                }
-                
-                else {
-                    currentSong.play();
-                }
-                const img = playBtn.querySelector("img");
-                if (img) img.src = "pause.svg";
+                currentSong.play().then(() => {
+                    if (playImg) playImg.src = "pause.svg";
+                }).catch(err => console.log("Playback error:", err));
             } else {
                 currentSong.pause();
-                const img = playBtn.querySelector("img");
-                if (img) img.src = "play.svg";
+                if (playImg) playImg.src = "play.svg";
             }
         });
     }

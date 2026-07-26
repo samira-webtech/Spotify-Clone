@@ -65,14 +65,11 @@ body {
 }
 
 .right {
-  margin: 6px 0;
-  position: relative;
   margin: 17px 0px 0px 0px;
   width: 72vw;
   position: relative;
 }
 
-/* buttons */
 .signupbtn {
   background-color: rgb(33, 33, 33);
   color: rgb(153, 146, 146);
@@ -80,7 +77,6 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   font-weight: bolder;
-  text-shadow: 0.5px 0px 0px grey;
 }
 .signupbtn:hover {
   color: #fdfdfd;
@@ -88,21 +84,12 @@ body {
 }
 
 .loginbtn {
-  /* background-color: rgb(163, 60, 60);   
-    color: rgb(153, 146, 146);         
-  border: none;             
-  padding: 10px 20px;     
-  cursor: pointer;       
-  font-weight: bolder;
-  text-shadow: 0.5px 0px 0px grey; */
-
   padding: 6px;
   width: 82px;
   border-radius: 30px;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   color: black;
-  text-shadow: 0.9px 0px 0px rgb(0, 0, 0);
   border: none;
   cursor: pointer;
 }
@@ -110,8 +97,6 @@ body {
 .loginbtn:hover {
   cursor: pointer;
   transform: scale(1.07);
-  color: black;
-  text-shadow: 0.9px 0px 0px black;
 }
 
 .header {
@@ -124,8 +109,6 @@ body {
 .header > * {
   padding: 20px;
 }
-
-/* cards  */
 
 .spotify-playlists {
   padding: 20px;
@@ -153,20 +136,9 @@ body {
 .card {
   width: 180px;
   padding: 10px;
-  /* background-color: #252525; */
   border-radius: 15px;
   position: relative;
 }
-
-/* card hover changed
-playbutton er 
-transform: translateY(10px);
-transition: all 0.2s ease; te change hoyeche
-.card:hover .playbutton {
-opacity: 1;
-transform: translateY(0);
-
-} te change */
 
 .playbutton {
   position: absolute;
@@ -179,8 +151,6 @@ transform: translateY(0);
   cursor: pointer;
 }
 
-
-
 .card > * {
   padding-top: 2px;
 }
@@ -191,27 +161,22 @@ transform: translateY(0);
   box-shadow: -6px 3px 9px -2px #310707;
   border-radius: 5px;
 }
+
 .playbar {
   position: absolute;
-  bottom: 0px;
-  left: 1px;
   bottom: 3px;
+  left: 1px;
   background-color: rgb(255, 255, 255);
   width: 99.7%;
   height: 41px;
   padding: 4px;
   box-sizing: border-box;
   border-radius: 6px 6px;
-  cursor: pointer;
-
-  
 }
-
 
 .songList {
   height: 338px;
   overflow: auto;
-  /* width: px; */
   margin-bottom: 44px;
 }
 
@@ -237,6 +202,7 @@ transform: translateY(0);
   margin: 6px 1px;
   border: 1px solid rgb(39, 37, 37);
   border-radius: 5px;
+  align-items: center;
 }
 
 .seekbar {
@@ -252,10 +218,8 @@ transform: translateY(0);
 }
 
 .seekbar:hover {
-  background-color: #535353;
-   
+  background-color: #c1d0e4;
 }
-
 
 .circle {
   width: 12px;
@@ -264,67 +228,43 @@ transform: translateY(0);
   background-color: black;
   position: absolute;
   top: 50%;
-  left: 1%;
+  left: 0%;
   transform: translate(-50%, -50%);
-  transition: left 0.5s;
+  transition: none;
+  pointer-events: none; /* Let clicks pass directly through to the seekbar track */
 }
-
-
-
-
-
-
 
 #playBtn {
   background: transparent;
-  border: none;       /* Removes the default button border */
-  outline: none;      /* Removes the blue/white outline when clicked */
+  border: none;
+  outline: none;
   padding: 0;
   cursor: pointer;
+  line-height: 0;
 }
-
 
 #playBtn img,
 .playsvg {
- width:90px ;/* Increase or decrease this value as needed */
-  height:25px; /* Keep height equal to width to prevent stretching */
+  width: 90px;
+  height: 25px;
 }
 
-
-
-.songtime {
-  position: relative; /* Enables top/bottom/left/right */
-  left:276px;
+.songTime {
+  position: relative;
+  left: 350px;
   top: 3px;
- /* right: 200px; */
   color: black;
-  /* border: 1px solid #222; */
 }
 
-
-
-
-
-
-/* 1. Target ONLY the Music SVG (The first image in the list item) */
+.songName {
+  position: relative;
+  bottom: 26px;
+  left: 10px;
+  color: black;
+  pointer-events: none; /* ADD THIS — lets clicks pass through to the buttons underneath */
+}
 .songList ul li > img:first-of-type {
   width: 20px;
-  /* height: 21px; */
-  /* min-width: 20px;  */
-  /* Prevents shrinking */
-}
-
-/* 2. Target ONLY the Play Now SVG (The image inside the playnow div) */
-.songList ul li .playnow img {
-  width: px; /* You can make this bigger or smaller independently */
-  /* height: 30px; */
-  /* margin-left: 10px; */
-}
-
-/* 3. Ensure the list item doesn't squash the icons */
-.songList ul li {
-  display: flex;
-  align-items: center; /* Keeps everything vertically centered */
 }
 
 .songList .info {
@@ -336,4 +276,3 @@ transform: translateY(0);
   font-weight: bold;
   color: white;
 }
-
