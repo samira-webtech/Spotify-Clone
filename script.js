@@ -201,4 +201,14 @@ async function main() {
     }
 }
 
+const menuBtn = document.getElementById("menuBtn");
+const leftPanel = document.querySelector(".left");
+
+if (menuBtn && leftPanel) {
+  menuBtn.addEventListener("click", () => {
+    leftPanel.classList.toggle("active");
+  });
+}
+
+
 main();

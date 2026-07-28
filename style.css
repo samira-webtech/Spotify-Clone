@@ -12,7 +12,7 @@ body {
 
 .left {
   width: 25vw;
-  padding: 10px;
+  padding:0px;
 }
 
 .home ul li {
@@ -65,10 +65,11 @@ body {
 }
 
 .right {
-  margin: 17px 0px 0px 0px;
-  width: 72vw;
-  position: relative;
+    margin: 17px 0px 0px 0px;
+    width: 73vw;
+    position: relative;
     min-width: 0;
+    right: -7px;
 }
 
 .signupbtn {
@@ -282,21 +283,50 @@ body {
   position: relative; /* fix bug 3 */
 }
 
+#menuBtn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 0 px;
+  display: none;
+}
+
+
+
+
 @media (max-width: 768px) { /* fix bug 1 — wider, realistic breakpoint */
   .left {
     position: absolute;
     left: -100%;
     top: 0;
+    width: 80vw;       /* ADD THIS */
+    max-width: 300px; 
     height: 100%;
     transition: all 0.4s;
     z-index: 3;
   }
 
   .left.active {
-    left: 0; /* fix bug 2 — this is what actually brings it into view */
+    left: 0; 
   }
 
   .right {
-    width: 100%; /* fix bug 4 */
+    width: 100vw; 
   }
+
+   #menuBtn {
+    display: block;       /* only appears once the layout switches to mobile */
+  }
+
+/* .p-1 {
+    padding: 9px;
+} */
+
+
+
+
 }
+
+
