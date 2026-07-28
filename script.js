@@ -203,12 +203,25 @@ async function main() {
 
 const menuBtn = document.getElementById("menuBtn");
 const leftPanel = document.querySelector(".left");
+const closeBtn = document.querySelector(".close"); // <-- ADD THIS LINE
 
 if (menuBtn && leftPanel) {
   menuBtn.addEventListener("click", () => {
     leftPanel.classList.toggle("active");
   });
 }
+
+if (closeBtn && leftPanel) {
+  closeBtn.addEventListener("click", () => {
+    leftPanel.classList.remove("active");
+  });
+}
+main(); // this now actually gets called
+
+
+
+
+
 
 
 main();

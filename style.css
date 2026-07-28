@@ -24,6 +24,8 @@ body {
   font-weight: bold;
 }
 
+
+
 .logo {
   display: flex;
   align-items: center;
@@ -294,6 +296,34 @@ body {
 }
 
 
+/* for close svg  */
+
+.home {
+  position: relative; /* anchor for the close icon */
+}
+.close {
+  display: none; /* hidden on desktop, no need for it there */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 4;
+  color: wheat;
+}
+
+.close img {
+  width: 18px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 768px) { /* fix bug 1 — wider, realistic breakpoint */
@@ -308,6 +338,9 @@ body {
     z-index: 3;
   }
 
+.close{
+  display: block;
+}
   .left.active {
     left: 0; 
   }
