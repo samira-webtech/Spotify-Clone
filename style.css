@@ -170,7 +170,7 @@ body {
   position: absolute;
   bottom: 3px;
   left: 1px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.103);
   width: 99.7%;
   height: 41px;
   padding: 4px;
@@ -212,7 +212,7 @@ body {
 .seekbar {
   height: 4px;
   width: 98%;
-  background-color:#c1d0e4;
+  background-color:#dde2e7;
   border: none;
   position: absolute;
   left: 7px;
@@ -255,18 +255,56 @@ body {
 
 .songTime {
   position: relative;
-  left: 350px;
-  top: 3px;
-  color: black;
+  left: 50px;
+  top: 5px;
+  color: rgb(253, 249, 249);
+  bottom: 0px;
+    font-size: 13px;
+
+    
 }
 
 .songName {
   position: relative;
-  bottom: 26px;
+  bottom: 20px;
   left: 10px;
-  color: black;
+  color: rgb(255, 255, 255);
   pointer-events: none; /* ADD THIS — lets clicks pass through to the buttons underneath */
+  font-size: 11px;
+
+
 }
+
+
+
+
+
+
+.volmage {
+  position: relative;
+  left: 350px;
+  top: px;
+  color: rgb(253, 249, 249);
+  
+    
+}
+
+.songNameVolume{
+display: flex;
+justify-content: center;
+
+bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 .songList ul li > img:first-of-type {
   width: 20px;
 }
@@ -308,16 +346,13 @@ body {
   right: 10px;
   cursor: pointer;
   z-index: 4;
-  color: wheat;
+
 }
 
 .close img {
   width: 18px;
+
 }
-
-
-
-
 
 
 
@@ -353,12 +388,13 @@ body {
     display: block;       /* only appears once the layout switches to mobile */
   }
 
-/* .p-1 {
-    padding: 9px;
-} */
+.playbar{
+  bottom: -144px;
+}
 
-
-
+.right{
+  margin: 0;
+}
 
 }
 

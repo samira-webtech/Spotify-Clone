@@ -224,4 +224,3 @@ main(); // this now actually gets called
 
 
 
-main();
