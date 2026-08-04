@@ -216,6 +216,18 @@ if (closeBtn && leftPanel) {
     leftPanel.classList.remove("active");
   });
 }
+
+const volumeSlider = document.querySelector('.range input[type="range"]');
+
+if (volumeSlider) {
+  volumeSlider.addEventListener("input", (e) => {
+    currentSong.volume = e.target.value / 100;
+  });
+}
+
+
+
+
 main(); // this now actually gets called
 
 

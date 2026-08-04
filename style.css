@@ -277,14 +277,12 @@ body {
 
 
 
-
-
-
-.volmage {
+.volImage {
   position: relative;
-  left: 350px;
-  top: px;
+  left:189px;
+  top:0px;
   color: rgb(253, 249, 249);
+
   
     
 }
@@ -292,7 +290,6 @@ body {
 .songNameVolume{
 display: flex;
 justify-content: center;
-
 bottom: 20px;
 }
 
@@ -354,6 +351,13 @@ bottom: 20px;
 
 }
 
+.volImage{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 130px;
+  cursor: pointer;
+}
 
 
 
@@ -395,6 +399,17 @@ bottom: 20px;
 .right{
   margin: 0;
 }
+
+
+.volImage{
+  position: relative;
+  display: flex;
+  /* align-items: center; */
+  margin-left:  px;
+  left: 0px;
+  cursor: pointer;
+}
+
 
 }
 
