@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+:root{
+  --a:0;
+
+}
 * {
   margin: 0;
   padding: 0;
@@ -119,6 +123,11 @@ body {
   overflow-x: scroll;
 }
 
+
+
+
+
+/* right side  */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -140,37 +149,67 @@ body {
 .card {
   width: 180px;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 9px;
   position: relative;
+  transition:  all 1s;
+  /* background-color: #1b1b1bbb; */
+
+}
+
+.card:hover{
+  background-color: rgb(119, 116, 116);
+  cursor: pointer;
+    /* box-shadow: -10px 11px 12px -2px #161515; */
+    --a: 1;
+  
+
+}
+.card > * {
+  padding-top: .9px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+
+  border-radius: 5px;
 }
 
 .playbutton {
   position: absolute;
   top: 124px;
   left: 131px;
-  opacity: 0%;
+  transition: 1s;
+  opacity: var(--a);
 }
+
+
+
+
 
 .playsvg{
   cursor: pointer;
 }
 
-.card > * {
-  padding-top: 2px;
-}
 
-.card img {
-  width: 100%;
-  object-fit: contain;
-  box-shadow: -6px 3px 9px -2px #310707;
-  border-radius: 5px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .playbar {
   position: absolute;
   bottom: 3px;
   left: 1px;
-  background-color: rgba(255, 255, 255, 0.103);
+  background-color: rgba(209, 25, 25, 0.103);
   width: 99.7%;
   height: 41px;
   padding: 4px;
@@ -351,14 +390,12 @@ bottom: 20px;
 
 }
 
-.volImage{
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-left: 130px;
-  cursor: pointer;
-}
-
+ .volImage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: 270px;   /* smaller gap on narrow screens instead of 130px */
+  }
 
 
 
@@ -401,15 +438,27 @@ bottom: 20px;
 }
 
 
-.volImage{
-  position: relative;
-  display: flex;
-  /* align-items: center; */
-  margin-left:  px;
-  left: 0px;
-  cursor: pointer;
-}
+ .volImage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: 175px;   /* smaller gap on narrow screens instead of 130px */
+  }
 
+  .range input[type="range"] {
+    height: 10px;          /* slightly shorter slider on small screens */
+  }
+
+  .songNameVolume {
+    gap: 6px;
+  }
+
+  .songTime {
+    font-size: 11px;       /* scale text down a touch on mobile */
+    left: 20px;
+  }
+
+  
 
 }
 
