@@ -225,9 +225,13 @@ if (volumeSlider) {
   });
 }
 
+let myCards = document.querySelectorAll(".card");
+myCards.forEach(function(onecard){
+    onecard.addEventListener("click",function(){
 
-
-
+        console.log("you clicked a card")
+    })
+});
 main(); // this now actually gets called
 
 
