@@ -403,6 +403,11 @@ bottom: 20px;
 
 
 @media (max-width: 768px) { /* fix bug 1 — wider, realistic breakpoint */
+  .seekbar{
+    left: 40px;
+  }
+  
+  
   .left {
     position: absolute;
     left: -100%;

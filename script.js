@@ -225,18 +225,30 @@ if (volumeSlider) {
   });
 }
 
+
+
+let playlistOne = [
+  { name: "After Sunset", url: "songs/After Sunset - Alex Jones _ Xander Jones.mp3" },
+  { name: "Fire In The Sky", url: "songs/Fire In The Sky - Alex Jones _ Xander Jones.mp3" }
+];
+
+let playlistTwo = [
+  { name: "Intergalactic", url: "songs/Intergalactic - Alex Jones _ Xander Jones.mp3" },
+  { name: "On The Flip", url: "songs/On The Flip - The Grey Room _ Density & Time.mp3" }
+];
+
+
+
 let myCards = document.querySelectorAll(".card");
-myCards.forEach(function(onecard){
-    onecard.addEventListener("click",function(){
-
-        console.log("you clicked a card")
-    })
+myCards.forEach(function(oneCard , oneNumber){
+    oneCard.addEventListener("click",function ( )  {
+        if(oneNumber===0){
+            songs = playlistOne;
+        } else if (oneNumber===1){
+            songs = playlistTwo;
+        }
+        console.log("you clicked a card" , oneNumber );
+    });
 });
-main(); // this now actually gets called
 
-
-
-
-
-
-
+main();
