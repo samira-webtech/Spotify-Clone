@@ -19,6 +19,15 @@ async function getsongs() {
 
   let songsUrl = `${origin}/songs/`;
 
+  // One line per song — put a different cover image link for each
+  const coverMap = {
+    "After Sunset - Alex Jones _ Xander Jones": "after-sunset.jpg",
+    "Fire In The Sky - Alex Jones _ Xander Jones": "fireInTheSky.jpg",
+    "Intergalactic - Alex Jones _ Xander Jones": "Entergalactic.jpg",
+    "On The Flip - The Grey Room _ Density & Time": "OnTheFlip.jpg",
+    "Stake Out - Alex Jones _ Xander Jones": "Stake Out.jpg",
+  };
+
   try {
     let response = await fetch(songsUrl);
     if (!response.ok) throw new Error("Could not reach songs directory");
@@ -40,6 +49,7 @@ async function getsongs() {
         loadedSongs.push({
           url: href.startsWith("http") ? href : encodeURI(`${songsUrl}${href}`),
           name: cleanName,
+          cover: coverMap[cleanName] || "",
         });
       }
     }
@@ -53,22 +63,27 @@ async function getsongs() {
     {
       name: "After Sunset - Alex Jones _ Xander Jones",
       url: "songs/After Sunset - Alex Jones _ Xander Jones.mp3",
+      cover: coverMap["After Sunset - Alex Jones _ Xander Jones"],
     },
     {
       name: "Fire In The Sky - Alex Jones _ Xander Jones",
       url: "songs/Fire In The Sky - Alex Jones _ Xander Jones.mp3",
+      cover: coverMap["Fire In The Sky - Alex Jones _ Xander Jones"],
     },
     {
       name: "Intergalactic - Alex Jones _ Xander Jones",
       url: "songs/Intergalactic - Alex Jones _ Xander Jones.mp3",
+      cover: coverMap["Intergalactic - Alex Jones _ Xander Jones"],
     },
     {
       name: "On The Flip - The Grey Room _ Density & Time",
       url: "songs/On The Flip - The Grey Room _ Density & Time.mp3",
+      cover: coverMap["On The Flip - The Grey Room _ Density & Time"],
     },
     {
       name: "Stake Out - Alex Jones _ Xander Jones",
       url: "songs/Stake Out - Alex Jones _ Xander Jones.mp3",
+      cover: coverMap["Stake Out - Alex Jones _ Xander Jones"],
     },
   ];
 }
@@ -109,7 +124,7 @@ function renderCards() {
           </g>
         </svg>
       </div>
-      <img src="music.svg" alt="Song Cover">
+      <img src="${song.cover || 'music.svg'}" alt="Song Cover">
       <h3>${song.name}</h3>
     </div>`;
   });

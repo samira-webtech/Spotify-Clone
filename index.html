@@ -10,12 +10,16 @@
   <body>
     <div class="container flex bg-black">
       <div class="left">
+       
+
+
         <div class="home bg-grey rounded m-1 p-1">
+
           <div class="close">
-            <img class="invert" src="close.svg" alt="" />
+            <img class ="invert"  src="close.svg" alt="">
           </div>
           <div class="logo"><img src="logo.svg" alt="logo" /></div>
-
+          
           <ul>
             <li><img src="home.svg" alt="home" />home</li>
             <li><img src="search.svg" alt="search" />search</li>
@@ -111,8 +115,25 @@
 
         <div class="spotify-playlists">
           <h2>Spotify Playlists</h2>
-          <div class="card-container"></div>
+          <div class="card-container">
+           
+
         </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Playbar is now properly positioned outside the playlists content block -->
         <div class="playbar">
@@ -126,17 +147,20 @@
               <img id="playImg" src="play.svg" class="playsvg" alt="" />
             </button>
             <img id="next" src="nextsong.svg" alt="" />
-
+            
+              
             <div class="songNameVolume">
-              <span class="songTime">00:00 / 00:00</span>
+               <span class="songTime">00:00 / 00:00</span>
+               
+               <span class="volImage">
+                 <img src="volume.svg" alt="volume svg">
+                 <span class="range">
+                  <input type="range" name="volume">
+                 </span>
+              </span>         
+             </div>
+       
 
-              <span class="volImage">
-                <img src="volume.svg" alt="volume svg" />
-                <span class="range">
-                  <input type="range" name="volume" />
-                </span>
-              </span>
-            </div>
           </div>
 
           <div class="songName">Song Name</div>
@@ -149,11 +173,4 @@
     <script src="script.js"></script>
   </body>
 </html>
->
-
-
-
-
-
-
-
+>>

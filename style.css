@@ -169,10 +169,11 @@ body {
 }
 
 .card img {
-  width: 100%;
-  object-fit: contain;
-
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
   border-radius: 5px;
+  
 }
 
 .playbutton {
@@ -402,69 +403,71 @@ bottom: 20px;
 
 
 
-@media (max-width: 768px) { /* fix bug 1 — wider, realistic breakpoint */
-  .seekbar{
-    left: 40px;
-  }
-  
-  
-  .left {
-    position: absolute;
-    left: -100%;
-    top: 0;
-    width: 80vw;       /* ADD THIS */
-    max-width: 300px; 
-    height: 100%;
-    transition: all 0.4s;
-    z-index: 3;
-  }
-
-.close{
-  display: block;
-}
-  .left.active {
-    left: 0; 
-  }
-
-  .right {
-    width: 100vw; 
-  }
-
-   #menuBtn {
-    display: block;       /* only appears once the layout switches to mobile */
-  }
-
-.playbar{
-  bottom: -144px;
-}
-
-.right{
-  margin: 0;
-}
 
 
- .volImage {
-    position: relative;
-    display: flex;
-    align-items: center;
-    left: 175px;   /* smaller gap on narrow screens instead of 130px */
-  }
 
-  .range input[type="range"] {
-    height: 10px;          /* slightly shorter slider on small screens */
-  }
 
-  .songNameVolume {
-    gap: 6px;
-  }
 
-  .songTime {
-    font-size: 11px;       /* scale text down a touch on mobile */
-    left: 20px;
-  }
 
-  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .left { position: fixed; left: -130%; top: 0; width: 373px; height: 100vh; background-color: black; padding: 0; transition: all 0.3s; z-index: 3; }
+  .left.active { left: 0; }
+  .close { display: block; position: absolute; right: 31px; top: 25px; width: 29px; }
+  #menuBtn { display: block; }
+  .right { width: 100vw; margin: 0; }
+  .card { width: 55vw; }
+  .card-container { margin: 0; justify-content: center; max-height: unset; overflow-y: unset; margin-bottom: 35vh; }
 }
 
+@media (max-width: 768px) {
+  .left { position: absolute; left: -100%; top: 0; width: 80vw; max-width: 300px; height: 100%; transition: all 0.4s; z-index: 3; }
+  .close { display: block; }
+  .left.active { left: 0; }
+  .right { width: 100vw; margin: 0; }
+  #menuBtn { display: block; }
+}
 
+@media (max-width: 500px) {
+  .card { width: 100%; }
+  .header > * { padding: 2px; }
+  .header { padding: 7px; }
+  .buttons > * { margin: 0 6px; }
+  .library { height: 85vh; }
+  .left { width: 100vw; }
+}
